@@ -41,12 +41,10 @@ export default function FAQ() {
 
             <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
               <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium">
-                É possível aplicar o método mesmo se o pai/mãe não participar do curso?
+                O curso A mamãe é top e o papai também! é para pais ou filhos?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 pt-2 text-slate-600">
-                Sim, é possível! Embora seja ideal que ambos os pais estejam alinhados, muitas mães conseguem
-                implementar as técnicas sozinhas e, com o tempo, o outro responsável acaba percebendo os resultados
-                positivos e se engajando naturalmente.
+                O objetivo do curso é transformar o coração dos pais e dessa forma com as mudanças de comportamento e o desenvolvimento da Inteligência Emocional o impacto vai diretamente na vida dos filhos gerando mais Bem estar.
               </AccordionContent>
             </AccordionItem>
 
