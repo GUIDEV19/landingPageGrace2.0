@@ -52,15 +52,6 @@ export default function CourseModules() {
 
           {/* Módulo 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2">
-              <Image
-                src="/aulas/aula02.png?height=300&width=400"
-                alt="Desenvolvendo Birras e Crises Emocionais"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
             <div className="order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 2</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Parentalidade Consciente</h3>
@@ -86,6 +77,15 @@ export default function CourseModules() {
                   </span>
                 </li>
               </ul>
+            </div>
+            <div className="order-2">
+              <Image
+                src="/aulas/aula02.png?height=300&width=400"
+                alt="Desenvolvendo Birras e Crises Emocionais"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
 
@@ -128,15 +128,6 @@ export default function CourseModules() {
 
           {/* Módulo 4 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2">
-              <Image
-                src="/aulas/aula04.png?height=300&width=400"
-                alt="Atividades Práticas para o Dia a Dia"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
             <div className="order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 4</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Alfabetização Emocional</h3>
@@ -162,6 +153,15 @@ export default function CourseModules() {
                   <span className="text-sm text-slate-600">Atividades para momentos de crise</span>
                 </li>
               </ul>
+            </div>
+            <div className="order-2">
+              <Image
+                src="/aulas/aula04.png?height=300&width=400"
+                alt="Atividades Práticas para o Dia a Dia"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
 
@@ -204,15 +204,6 @@ export default function CourseModules() {
 
           {/* Módulo 6 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2">
-              <Image
-                src="/aulas/aula06.png?height=300&width=400"
-                alt="Atividades Práticas para o Dia a Dia"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
             <div className="order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 6</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Como você ouve seu filho?</h3>
@@ -238,6 +229,15 @@ export default function CourseModules() {
                   <span className="text-sm text-slate-600">Atividades para momentos de crise</span>
                 </li>
               </ul>
+            </div>
+            <div className="order-2">
+              <Image
+                src="/aulas/aula06.png?height=300&width=400"
+                alt="Atividades Práticas para o Dia a Dia"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
 
@@ -280,15 +280,6 @@ export default function CourseModules() {
 
           {/* Módulo 8 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2">
-              <Image
-                src="/aulas/aula08.png?height=300&width=400"
-                alt="Atividades Práticas para o Dia a Dia"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
             <div className="order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 8</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Mindset Na Educação dos Filhos</h3>
@@ -314,6 +305,15 @@ export default function CourseModules() {
                   <span className="text-sm text-slate-600">Atividades para momentos de crise</span>
                 </li>
               </ul>
+            </div>
+            <div className="order-2">
+              <Image
+                src="/aulas/aula08.png?height=300&width=400"
+                alt="Atividades Práticas para o Dia a Dia"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
 
@@ -356,15 +356,6 @@ export default function CourseModules() {
 
           {/* Módulo 10 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2">
-              <Image
-                src="/aulas/aula10.png?height=300&width=400"
-                alt="Atividades Práticas para o Dia a Dia"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
             <div className="order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 10</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Educação Emocional</h3>
@@ -390,6 +381,15 @@ export default function CourseModules() {
                   <span className="text-sm text-slate-600">Atividades para momentos de crise</span>
                 </li>
               </ul>
+            </div>
+            <div className="order-2">
+              <Image
+                src="/aulas/aula10.png?height=300&width=400"
+                alt="Atividades Práticas para o Dia a Dia"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
         </div>
