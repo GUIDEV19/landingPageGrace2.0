@@ -12,7 +12,7 @@ import FAQ from "@/components/faq"
 
 declare global {
   interface Window {
-      fbq: any;
+    fbq: any;
   }
 }
 
@@ -20,14 +20,14 @@ export default function Home() {
   const handleClick = () => {
     // Rastreia o clique do botão
     if (typeof window !== 'undefined' && window.fbq) {
-        window.fbq('track', 'ViewContent', {
-            value: 197.00,
-            currency: 'BRL',
-        });
+      window.fbq('track', 'ViewContent', {
+        value: 197.00,
+        currency: 'BRL',
+      });
     }
 
     window.location.href = 'https://pay.kiwify.com.br/Q6p0tJ4'
-};
+  };
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
@@ -232,18 +232,21 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
+              img='tatiane.png'
               url="/data/aluna01.mp4"
               name="Tatiane Sousa"
               role="Mãe de Paulo, 4 anos"
               quote="Gente esse curso apareceu pra mim quando eu estava vivendo uma crise na minha maternidade, eu precisa de algo para abrir a minha mente e os meus olhos, no curso encontrei ferramentas que abriram meus olhos e mudou minha mentalidade."
             />
             <TestimonialCard
+              img='lara.png'
               url="/data/aluna02.mp4"
               name="Lara Rodrigues"
               role="Mãe de Júlia, 6 anos"
               quote="O curso A mamãe é top foi um divisor de águas na minha vida e na vida da minha família, o curso é maravilhoso, eu aprendi levar a maternidade com mais leveza."
             />
             <TestimonialCard
+              img='elaine.png'
               url="/data/aluna03.mp4"
               name="Elaine Oliveira"
               role="Mãe de Lucas e Beatriz"
@@ -324,7 +327,7 @@ export default function Home() {
             felizes
           </p>
 
-          <PriceCard handleClick={handleClick}/>
+          <PriceCard handleClick={handleClick} />
         </div>
       </section>
 

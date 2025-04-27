@@ -42,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-sm text-gray-600 hover:text-pink-500">
-                  Por que IE?
+                  Por que a mamãe é top e o papai também?
                 </Link>
               </li>
               <li>
@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 mt-12 pt-6 text-center">
           <p className="text-sm text-gray-500">
-            © 2023 Eduque com Inteligência Emocional. Todos os direitos reservados.
+            © 2025 Eduque com Inteligência Emocional. Todos os direitos reservados.
           </p>
         </div>
       </div>

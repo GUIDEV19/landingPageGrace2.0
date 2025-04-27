@@ -15,7 +15,16 @@ export default function CourseModules() {
         <div className="space-y-12 max-w-4xl mx-auto">
           {/* Módulo 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-2">
+              <Image
+                src="/aulas/aula01.png?height=300&width=400"
+                alt="Fundamentos da Inteligência Emocional"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+            <div className="order-1 md:order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 1</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Perfil comportamental na educação dos filhos</h3>
               <ul className="space-y-3">
@@ -38,15 +47,6 @@ export default function CourseModules() {
                   <span className="text-sm text-slate-600">Conheça o cérebro e o desenvolvimento emocional</span>
                 </li>
               </ul>
-            </div>
-            <div className="order-1 md:order-2">
-              <Image
-                src="/aulas/aula01.png?height=300&width=400"
-                alt="Fundamentos da Inteligência Emocional"
-                width={400}
-                height={300}
-                className="w-full h-auto rounded-xl"
-              />
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function CourseModules() {
 
           {/* Módulo 3 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 3</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Alfabetização Emocional</h3>
               <ul className="space-y-3">
@@ -115,7 +115,7 @@ export default function CourseModules() {
                 </li>
               </ul>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-2 md:order-2">
               <Image
                 src="/aulas/aula03.png?height=300&width=400"
                 alt="Comunicação Efetiva e Limites Amorosos"
@@ -232,7 +232,7 @@ export default function CourseModules() {
             </div>
             <div className="order-2">
               <Image
-                src="/aulas/aula06.png?height=300&width=400"
+                src="/aulas/aula06.webp?height=300&width=400"
                 alt="Atividades Práticas para o Dia a Dia"
                 width={400}
                 height={300}
@@ -243,7 +243,7 @@ export default function CourseModules() {
 
           {/* Módulo 7 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 7</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Linguagens de Amor na Educação dos Filhos</h3>
               <ul className="space-y-3">
@@ -267,9 +267,9 @@ export default function CourseModules() {
                 </li>
               </ul>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-2 md:order-2">
               <Image
-                src="/aulas/aula07.png?height=300&width=400"
+                src="/aulas/aula07.webp?height=300&width=400"
                 alt="Comunicação Efetiva e Limites Amorosos"
                 width={400}
                 height={300}
@@ -319,7 +319,7 @@ export default function CourseModules() {
 
           {/* Módulo 9 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <div className="text-pink-500 font-medium mb-2">MÓDULO 9</div>
               <h3 className="text-xl font-bold text-slate-800 mb-4">Educação Emocional</h3>
               <ul className="space-y-3">
@@ -343,9 +343,9 @@ export default function CourseModules() {
                 </li>
               </ul>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-2 md:order-2">
               <Image
-                src="/aulas/aula09.png?height=300&width=400"
+                src="/aulas/aula09.webp?height=300&width=400"
                 alt="Comunicação Efetiva e Limites Amorosos"
                 width={400}
                 height={300}
@@ -384,7 +384,7 @@ export default function CourseModules() {
             </div>
             <div className="order-2">
               <Image
-                src="/aulas/aula10.png?height=300&width=400"
+                src="/aulas/aula10.webp?height=300&width=400"
                 alt="Atividades Práticas para o Dia a Dia"
                 width={400}
                 height={300}
