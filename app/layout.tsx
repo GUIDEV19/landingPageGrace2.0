@@ -1,24 +1,29 @@
 import type React from "react"
-import type { Metadata } from "next/types"
-import { Inter } from "next/font/google"
 import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Eduque com Inteligência Emocional",
-  description: "Transforme sua maternidade hoje mesmo com técnicas práticas de inteligência emocional",
+  title: "A Mamãe é Top e o Papai Também! | Grace Bezerra",
+  description: "Um evento transformador para pais e mães que desejam elevar a jornada na educação dos filhos.",
     generator: 'v0.dev'
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
