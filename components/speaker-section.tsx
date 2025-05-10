@@ -8,7 +8,7 @@ export default function SpeakerSection() {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-              <Image src="/grace.webp?height=400&width=500" alt="Grace Bezerra" fill className="object-cover" />
+              <Image src="/grace.webp" alt="Grace Bezerra" width={500} height={400} className="object-cover w-full h-full" />
             </div>
           </div>
           <div className="md:w-1/2">

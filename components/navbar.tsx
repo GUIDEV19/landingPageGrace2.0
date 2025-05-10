@@ -22,9 +22,9 @@ export default function Navbar() {
           <Link href="#evento" className="text-gray-600 hover:text-pink-500 transition-colors">
             Evento
           </Link>
-          <Link href="#palestrantes" className="text-gray-600 hover:text-pink-500 transition-colors">
+          {/* <Link href="#palestrantes" className="text-gray-600 hover:text-pink-500 transition-colors">
             Palestrantes
-          </Link>
+          </Link> */}
           <Link href="#local" className="text-gray-600 hover:text-pink-500 transition-colors">
             Local
           </Link>
