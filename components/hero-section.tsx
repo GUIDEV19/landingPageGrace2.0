@@ -25,17 +25,18 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2">
+            <div className="md:w-1/2 w-full">
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/grace.webp?height=600&width=500"
-                alt="Família feliz"
-                fill
-                className="object-cover"
-                priority
+              src="/grace.webp?height=600&width=500"
+              alt="Família feliz"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
               />
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </section>
