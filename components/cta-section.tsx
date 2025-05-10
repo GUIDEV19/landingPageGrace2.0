@@ -1,6 +1,10 @@
+'use client'
 import { Button } from "@/components/ui/button"
 
 export default function CtaSection() {
+  const handleButtonClick = () => {
+    window.open('https://wa.me/5562992615459?text=Olá, queria saber mais sobre a mentoria!', '_blank');
+  }
   return (
     <section className="py-16 bg-pink-50">
       <div className="container mx-auto px-4 text-center">
@@ -11,7 +15,7 @@ export default function CtaSection() {
           Não perca a chance de investir no futuro da sua família e vivenciar uma educação mais leve e conectada.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 rounded-md text-lg">
+          <Button onClick={handleButtonClick} className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 rounded-md text-lg">
             Quero garantir minha vaga
           </Button>
           <Button

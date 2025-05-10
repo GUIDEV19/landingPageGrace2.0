@@ -1,7 +1,11 @@
+"use client"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
+  const handleButtonClick = () => {
+    window.open('https://wa.me/5562992615459?text=Olá, queria saber mais sobre a mentoria!', '_blank');
+  }
   return (
     <section className="bg-pink-50 py-16">
       <div className="container mx-auto px-4">
@@ -14,7 +18,7 @@ export default function HeroSection() {
               Um evento transformador para pais e mães que desejam elevar a jornada na educação dos filhos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 rounded-md text-lg">
+              <Button onClick={handleButtonClick} className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 rounded-md text-lg" >
                 Quero participar
               </Button>
               <Button
