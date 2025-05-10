@@ -6,9 +6,9 @@ export default function SpeakerSection() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2">
-            <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-              <Image src="/grace.webp" alt="Grace Bezerra" width={500} height={400} className="object-cover w-full h-full" />
+          <div className="md:w-1/2 w-full">
+            <div className="relative w-full h-[50vh] md:h-[400px] rounded-lg overflow-hidden">
+              <Image src="/grace.webp" alt="Grace Bezerra" fill priority className="object-cover" />
             </div>
           </div>
           <div className="md:w-1/2">
