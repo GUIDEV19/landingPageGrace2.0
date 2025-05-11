@@ -14,7 +14,7 @@ export default function LocationSection() {
 
         <div className="bg-pink-50 rounded-lg overflow-hidden shadow-sm">
           <div className="relative w-full h-80">
-            <Image src="/evento.webp?height=400&width=1200" alt="Local do evento" fill className="object-cover" />
+            <Image src="/evento.webp" alt="Local do evento" fill className="object-cover" />
           </div>
           <div className="p-8">
             <h3 className="text-2xl font-semibold text-center mb-1 text-gray-300">Goiânia - Aporta Hall</h3>
