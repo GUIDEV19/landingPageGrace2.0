@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button"
 
 export default function CtaSection() {
   const handleButtonClick = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, queria saber mais sobre a mentoria!', '_blank');
+    window.open('https://wa.me/5562992615459?text=Olá, quero minha vaga na mentoria', '_blank');
+  }
+
+  const handleButtonClickinfo = () => {
+    window.open('https://wa.me/5562992615459?text=Olá, quero mais informações sobre a mentoria', '_blank');
   }
   return (
     <section className="py-16 bg-pink-50">
@@ -19,6 +23,7 @@ export default function CtaSection() {
             Quero garantir minha vaga
           </Button>
           <Button
+            onClick={handleButtonClickinfo}
             variant="outline"
             className="border-pink-500 text-pink-500 hover:bg-pink-50 px-8 py-6 rounded-md text-lg"
           >

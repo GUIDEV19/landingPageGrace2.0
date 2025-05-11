@@ -43,7 +43,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <p className="text-gray-400 mb-2">Kidscoach.grace@gmail.com</p>
+            <p className="text-gray-400 mb-2">suporte.amamaeetopeopapaitambem@gmail.com</p>
             <p className="text-gray-400 mb-4">(62) 99261-5459
             </p>
             <div className="flex space-x-4">

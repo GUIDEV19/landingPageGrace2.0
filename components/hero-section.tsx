@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   const handleButtonClick = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, queria saber mais sobre a mentoria!', '_blank');
+    window.open('https://wa.me/5562992615459?text=Olá, quero minha vaga na mentoria', '_blank');
+  }
+
+  const handleButtonClickinfo = () => {
+    window.open('https://wa.me/5562992615459?text=Olá, quero mais informações sobre a mentoria', '_blank');
   }
   return (
     <section className="bg-pink-50 py-16">
@@ -15,13 +19,14 @@ export default function HeroSection() {
               A Mamãe é Top e o <span className="text-pink-500">Papai Também!</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Um evento transformador para pais e mães que desejam elevar a jornada na educação dos filhos.
+            Um evento transformar para pais e mães que desejam ser cheios de Inteligência Emocional e previnir doenças emocionais.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button onClick={handleButtonClick} className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 rounded-md text-lg" >
                 Quero participar
               </Button>
               <Button
+                onClick={handleButtonClickinfo}
                 variant="outline"
                 className="border-pink-500 text-pink-500 hover:bg-pink-50 px-8 py-6 rounded-md text-lg"
               >

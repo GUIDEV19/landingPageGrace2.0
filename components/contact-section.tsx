@@ -3,20 +3,39 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, Instagram, Facebook, Youtube, TwitterIcon as TikTok } from "lucide-react"
+import emailjs from 'emailjs-com';
+import { useState } from "react";
+import { toast } from "react-toastify"; // Certifique-se de instalar react-toastify
 
 export default function ContactSection() {
-  const whatsAppMensagem = () => {
-    const name = (document.getElementById('name') as HTMLInputElement).value;
-    const email = (document.getElementById('email') as HTMLInputElement).value;
-    const phone = (document.getElementById('phone') as HTMLInputElement).value;
-    const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+  const [loading, setLoading] = useState(false);
 
-    const whatsappMessage = encodeURIComponent(
-      `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`
-    );
-
-    window.open(`https://wa.me/5562992615459?text=${whatsappMessage}`, '_blank');
+  const disparoEmail = async (e: any) => {
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+    setLoading(true);
+    const templateParams: any = {
+      title: "Mentoria a mamãe é top e o papai também",
+      name: (document.getElementById('name') as HTMLInputElement).value,
+      email: (document.getElementById('email') as HTMLInputElement).value,
+      time: (document.getElementById('phone') as HTMLInputElement).value,
+      message: (document.getElementById('message') as HTMLTextAreaElement).value
+    };
+    try {
+      await emailjs.send(
+        'service_z58lhj8',    // ID do serviço
+        'template_t3lld3s',
+        templateParams,   // ID do template
+        'drtHBCiEaIHw6saX6'        // ID do usuário
+      );
+      toast.success('Mensagem enviada com sucesso!');
+    } catch (error) {
+      console.error('Erro:', error);
+      toast.error('Erro ao enviar a mensagem. Tente novamente.');
+    } finally {
+      setLoading(false);
+    }
   }
+
   return (
     <section id="contato" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -62,8 +81,12 @@ export default function ContactSection() {
                 <Textarea id="message" className="w-full p-3 border border-gray-300 rounded-md h-32" />
               </div>
 
-              <Button onClick={whatsAppMensagem} className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-md w-full">
-                Enviar mensagem
+              <Button 
+                onClick={(e) => {disparoEmail(e)}} 
+                className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-md w-full"
+                disabled={loading}
+              >
+                {loading ? "Enviando..." : "Enviar mensagem"}
               </Button>
             </form>
           </div>
@@ -78,7 +101,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-400">E-mail</h4>
-                  <p className="text-gray-600">Kidscoach.grace@gmail.com</p>
+                  <p className="text-gray-600">suporte.amamaeetopeopapaitambem@gmail.com</p>
                 </div>
               </div>
 

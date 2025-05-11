@@ -9,7 +9,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "A Mamãe é Top e o Papai Também! | Grace Bezerra",
   description: "Um evento transformador para pais e mães que desejam elevar a jornada na educação dos filhos.",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+    icons: {
+      icon: "/logomamae.ico", // Caminho para o seu favicon
+    },
 }
 
 export default function RootLayout({

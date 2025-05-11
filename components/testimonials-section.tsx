@@ -13,69 +13,36 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="flex items-center mb-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
-                <Image src="/placeholder.svg?height=64&width=64" alt="Mariana Silva" fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-300">Daniela Oliveira</h3>
-                <p className="text-gray-500 text-sm">Mãe de 2 filhos</p>
-              </div>
-            </div>
-            <p className="text-gray-600 italic mb-4">
-              "Amandoooo o curso!!! <br/> Estou apaixonada!!! <br/> Choro nas aulas, como já errei <br/> E como já mudei depois das aulas <br/> Glória a Deus por sua vida e por tudo que vc compartilha"
-            </p>
-            <div className="flex text-pink-500">
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div className="relative w-full h-[400px]">
+              <Image
+                src="/dep1.webp"
+                alt="Depoimento 1"
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="flex items-center mb-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
-                <Image src="/placeholder.svg?height=64&width=64" alt="Carlos Mendes" fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-300">Maria</h3>
-                <p className="text-gray-500 text-sm">Pai de 3 filhos</p>
-              </div>
-            </div>
-            <p className="text-gray-600 italic mb-4">
-              "Estou fazendo seu curso mamãe é top e ta sendo muito bom. Consigo hj ser mais calma com minhas filhas."
-            </p>
-            <div className="flex text-pink-500">
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div className="relative w-full h-[400px]">
+              <Image
+                src="/dep2.webp"
+                alt="Depoimento 2"
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="flex items-center mb-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
-                <Image src="/placeholder.svg?height=64&width=64" alt="Juliana Costa" fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-300">Juliana Costa</h3>
-                <p className="text-gray-500 text-sm">Mãe de 1 filho</p>
-              </div>
-            </div>
-            <p className="text-gray-600 italic mb-4">
-              "Seu curso foi um divisor de águas na minha vida e do meu filho que Deus continue te abençoando nesse propósito lindo"
-            </p>
-            <div className="flex text-pink-500">
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
-              <Star className="fill-current" />
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden ">
+            <div className="relative w-full h-[400px]">
+              <Image
+              src="/dep3.webp"
+              alt="Depoimento 3"
+              fill
+              className="object-contain"
+              />
             </div>
           </div>
         </div>
