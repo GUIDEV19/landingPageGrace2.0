@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="md:w-1/2 w-full">
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-              src="/grace.webp?height=600&width=500"
+              src="/grace.webp"
               alt="Família feliz"
               fill
               className="object-cover"
