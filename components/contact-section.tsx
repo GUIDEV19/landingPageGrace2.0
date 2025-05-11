@@ -101,7 +101,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-400">E-mail</h4>
-                    <p className="text-gray-600 break-words overflow-hidden" style={{fontSize: "13px"}}>suporte.amamaeetopeopapaitambem@gmail.com</p>
+                    <p className="text-gray-600 break-words overflow-hidden" style={{fontSize: "10px"}}>suporte.amamaeetopeopapaitambem@gmail.com</p>
                 </div>
               </div>
 
