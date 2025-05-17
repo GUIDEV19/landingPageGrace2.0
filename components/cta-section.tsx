@@ -1,13 +1,16 @@
 'use client'
 import { Button } from "@/components/ui/button"
+import { trackFacebookLead } from "@/lib/utils"
 
 export default function CtaSection() {
   const handleButtonClick = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, quero minha vaga na mentoria', '_blank');
+    trackFacebookLead('cta_section', 'Quero garantir minha vaga');
+    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   const handleButtonClickinfo = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, quero mais informações sobre a mentoria', '_blank');
+    trackFacebookLead('cta_section', 'Mais informações');
+    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   }
   return (
     <section className="py-16 bg-pink-50">

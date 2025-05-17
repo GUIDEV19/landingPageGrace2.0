@@ -6,27 +6,60 @@ import { Mail, Phone, Instagram, Facebook, Youtube, TwitterIcon as TikTok } from
 import emailjs from 'emailjs-com';
 import { useState } from "react";
 import { toast } from "react-toastify"; // Certifique-se de instalar react-toastify
+import { trackFacebookLead, createTrelloCard } from "@/lib/utils"
 
 export default function ContactSection() {
   const [loading, setLoading] = useState(false);
 
-  const disparoEmail = async (e: any) => {
-    e.preventDefault(); // Previne o comportamento padrão do formulário
+  const formatWhatsAppMessage = (name: string, email: string, phone: string, message: string) => {
+    return `
+        *Nome:* ${name}
+      *Email:* ${email}
+      *Telefone:* ${phone}
+
+      ${message}`;
+  }
+
+  const disparoEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
-    const templateParams: any = {
-      title: "Mentoria a mamãe é top e o papai também",
-      name: (document.getElementById('name') as HTMLInputElement).value,
-      email: (document.getElementById('email') as HTMLInputElement).value,
-      time: (document.getElementById('phone') as HTMLInputElement).value,
-      message: (document.getElementById('message') as HTMLTextAreaElement).value
-    };
+
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const phone = (document.getElementById('phone') as HTMLInputElement).value;
+    const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+
     try {
+      // Track Facebook lead
+      trackFacebookLead('contact_section', 'Enviar mensagem');
+
+      // Send email
+      const templateParams = {
+        title: "Mentoria a mamãe é top e o papai também",
+        name,
+        email,
+        time: phone,
+        message
+      };
+
       await emailjs.send(
-        'service_z58lhj8',    // ID do serviço
+        'service_z58lhj8',
         'template_t3lld3s',
-        templateParams,   // ID do template
-        'drtHBCiEaIHw6saX6'        // ID do usuário
+        templateParams,
+        'drtHBCiEaIHw6saX6'
       );
+
+      // Create Trello card
+      await createTrelloCard(name, email, phone, message);
+
+      // Send to WhatsApp
+      const whatsappMessage = formatWhatsAppMessage(name, email, phone, message);
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/5562992615459?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+
       toast.success('Mensagem enviada com sucesso!');
     } catch (error) {
       console.error('Erro:', error);
@@ -49,7 +82,7 @@ export default function ContactSection() {
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
             <h3 className="text-2xl font-semibold mb-4 text-gray-300">
-              Tem alguma dúvida sobre o evento? Nossa equipe está pronta para ajudar você
+              Para se inscrever na mentoria, preencha o formulário abaixo
             </h3>
 
             <form className="space-y-6">
@@ -81,8 +114,8 @@ export default function ContactSection() {
                 <Textarea id="message" className="w-full p-3 border border-gray-300 rounded-md h-32" />
               </div>
 
-              <Button 
-                onClick={(e) => {disparoEmail(e)}} 
+              <Button
+                onClick={(e) => { disparoEmail(e) }}
                 className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-md w-full"
                 disabled={loading}
               >
@@ -101,7 +134,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-400">E-mail</h4>
-                    <p className="text-gray-600 break-words overflow-hidden" style={{fontSize: "10px"}}>suporte.amamaeetopeopapaitambem@gmail.com</p>
+                  <p className="text-gray-600 break-words overflow-hidden" style={{ fontSize: "10px" }}>suporte.amamaeetopeopapaitambem@gmail.com</p>
                 </div>
               </div>
 

@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   const handleButtonClick = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, quero minha vaga na mentoria', '_blank');
+    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   const handleButtonClickinfo = () => {
-    window.open('https://wa.me/5562992615459?text=Olá, quero mais informações sobre a mentoria', '_blank');
+    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   }
   return (
     <section className="bg-pink-50 py-16">
