@@ -77,7 +77,7 @@ export default function ContactSection() {
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/2">
             <h3 className="text-2xl font-semibold mb-4 text-gray-300">
-              Para se inscrever na mentoria, preencha o formulário abaixo
+              Para se inscrever na Imersão A Mamãe é top e o Papai também, preencha o formulário, Seja bem vinda …
             </h3>
 
             <form className="space-y-6">
