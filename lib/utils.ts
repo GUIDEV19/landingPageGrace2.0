@@ -15,9 +15,9 @@ export function trackFacebookLead(eventName: string, buttonText: string) {
 }
 
 export async function createTrelloCard(name: string, email: string, phone: string, message: string) {
-  const TRELLO_API_KEY =  process.env.TRELLO_API_KEY;
-  const TRELLO_TOKEN = process.env.TRELLO_TOKEN;
-  const TRELLO_LIST_ID = process.env.TRELLO_LIST_ID;
+  const TRELLO_API_KEY =  process.env.NEXT_PUBLIC_TRELLO_API_KEY;
+  const TRELLO_TOKEN = process.env.NEXT_PUBLIC_TRELLO_TOKEN;
+  const TRELLO_LIST_ID = process.env.NEXT_PUBLIC_TRELLO_LIST_ID;
 
   if (!TRELLO_API_KEY || !TRELLO_TOKEN || !TRELLO_LIST_ID) {
     console.error('Trello credentials not configured');
