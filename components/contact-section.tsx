@@ -12,12 +12,7 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
 
   const formatWhatsAppMessage = (name: string, email: string, phone: string, message: string) => {
-    return `
-        *Nome:* ${name}
-      *Email:* ${email}
-      *Telefone:* ${phone}
-
-      ${message}`;
+    return `${message}`;
   }
 
   const disparoEmail = async (e: React.FormEvent) => {
@@ -33,21 +28,21 @@ export default function ContactSection() {
       // Track Facebook lead
       trackFacebookLead('contact_section', 'Enviar mensagem');
 
-      // Send email
-      const templateParams = {
-        title: "Mentoria a mamãe é top e o papai também",
-        name,
-        email,
-        time: phone,
-        message
-      };
+      // // Send email
+      // const templateParams = {
+      //   title: "Mentoria a mamãe é top e o papai também",
+      //   name,
+      //   email,
+      //   time: phone,
+      //   message
+      // };
 
-      await emailjs.send(
-        'service_z58lhj8',
-        'template_t3lld3s',
-        templateParams,
-        'drtHBCiEaIHw6saX6'
-      );
+      // await emailjs.send(
+      //   'service_z58lhj8',
+      //   'template_t3lld3s',
+      //   templateParams,
+      //   'drtHBCiEaIHw6saX6'
+      // );
 
       // Create Trello card
       await createTrelloCard(name, email, phone, message);
