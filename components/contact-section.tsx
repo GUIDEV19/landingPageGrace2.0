@@ -44,10 +44,6 @@ export default function ContactSection() {
       //   'drtHBCiEaIHw6saX6'
       // );
 
-      // Create Trello card
-      await createTrelloCard(name, email, phone, message);
-
-      // Send to WhatsApp
       const whatsappMessage = formatWhatsAppMessage(name, email, phone, message);
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappUrl = `https://wa.me/5562992615459?text=${encodedMessage}`;
@@ -60,6 +56,12 @@ export default function ContactSection() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+
+      // Create Trello card
+      await createTrelloCard(name, email, phone, message);
+
+      // Send to WhatsApp
 
       toast.success('Mensagem enviada com sucesso!');
     } catch (error) {
