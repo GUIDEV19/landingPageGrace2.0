@@ -46,22 +46,19 @@ export default function ContactSection() {
 
       const whatsappMessage = formatWhatsAppMessage(name, email, phone, message);
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/5562992615459?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/+5562992615459?text=${encodedMessage}`;
 
-      // Create a temporary link element and click it
-      const link = document.createElement('a');
-      link.href = whatsappUrl;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
+      // Handle WhatsApp opening
+      if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // For mobile devices, use a direct link
+        window.location.href = whatsappUrl;
+      } else {
+        // For desktop, open in new tab
+        window.open(whatsappUrl, '_blank');
+      }
 
       // Create Trello card
       await createTrelloCard(name, email, phone, message);
-
-      // Send to WhatsApp
 
       toast.success('Mensagem enviada com sucesso!');
     } catch (error) {
